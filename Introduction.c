@@ -181,3 +181,77 @@ float div(float x, float y){
 return y/x;
 }
 
+
+//// C program to demonstrate const specifier
+//#include <stdio.h>
+//int main()
+//{
+//    const int num = 1;
+//
+//    num = 5; // Modifying the value
+//    return 0;
+//}
+
+// In C and C++ internally the default
+// type of 'var' is int
+enum VARS { asd = 'a' };
+
+// In C++ 11 (can have any integral type):
+//enum : type { var = 42; }
+
+// where mytype = int, char, long etc.
+// but it can't be float, double or
+// user defined data type.
+int Enum(void){
+	printf("%c",asd);
+	return 0;
+}
+
+
+
+//#include <iostream>
+//
+//int main()
+//{
+//    int var = 5;
+//    constexpr int k = var;
+//    std::cout << k;
+//    return 0;
+//}
+
+
+
+//// C program to demonstrate the problems
+//// in 'Macros'
+//#include <stdio.h>
+//
+//#define var 5
+//int main()
+//{
+//    printf("%d ", var);
+//
+//#ifdef var
+//#undef var
+//
+//// redefine var as 10
+//#define var 10
+//#endif
+//
+//    printf("%d", var);
+//    return 0;
+//}
+
+//#include <stdio.h>
+//int fun(int x)
+//{
+//    return (x+5);
+//}
+//
+//int yy = fun(20);
+//
+//int main()
+//{
+//    printf("%d ", yy);
+//}
+
+

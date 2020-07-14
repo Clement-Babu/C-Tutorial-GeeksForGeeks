@@ -102,4 +102,105 @@
 //    x1 = -0.0;
 //}
 
+//// Program 1
+//int main()
+//{
+//   int x;
+//   int x = 5;
+//   printf("%d", x);
+//   return 0;
+//}
 
+//// Program 2
+//int x;
+//int x = 5;
+//
+//int main()
+//{
+//   printf("%d", x);
+//   return 0;
+//}
+
+
+//int x = 5;
+//int x = 10;
+//
+//int main()
+//{
+//   printf("%d", x);
+//   return 0;
+//}
+
+
+//// C code to illustrate Internal Linkage
+//#include <stdio.h>
+//
+//static int animals = 8;
+//const int i = 5;
+//
+//int call_me(void)
+//{
+//    printf("%d %d", i, animals);
+//}
+// C code to illustrate Internal Linkage
+//#include <stdio.h>
+//
+//int main()
+//{
+//    call_me();
+//    animals = 2;
+//    printf("%d", animals);
+//    return 0;
+//}
+//#include <stdio.h>
+//#include "animal.cpp" // note that animal is included.
+//
+//int main()
+//{
+//    call_me();
+//    printf("\n having fun washing!");
+//    animals = 10;
+//    printf("%d\n", animals);
+//    return 0;
+//}
+
+
+
+//// C code to illustrate External Linkage
+//#include <stdio.h>
+//
+//void foo()
+//{
+//    int a;
+//    extern int b; // line 1
+//}
+//
+//void bar()
+//{
+//    int c;
+//    c = b; // error
+//}
+//
+//int main()
+//{
+//    foo();
+//    bar();
+//}
+
+
+//
+//// C code to illustrate External Linkage
+//#include <stdio.h>
+//
+//int x = 10;
+//int z = 5;
+//
+//int main()
+//{
+//
+//    extern int y; // line 2
+//    extern int z;
+//    printf("%d %d %d", x, y, z);
+//}
+
+int y = 2;
