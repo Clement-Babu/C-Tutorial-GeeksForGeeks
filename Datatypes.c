@@ -53,7 +53,7 @@ int Ascii()
 
 
 #include <stdio.h>
-int main(void){
+int IntegerPromotion(void){
 	int a=-1;
 	if (4<a){
 		printf("a is greater");
@@ -62,3 +62,71 @@ int main(void){
 		printf("size of int is greater");
 	}
 }
+
+
+
+#include <stdio.h>
+
+int CharPromotion()
+{
+    char ch1 = 125, ch2 = 10;
+    ch1 = ch1 + ch2;
+    printf("%d\n", ch1);
+    printf("%c\n", ch1 - ch2 - 4);
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+int IntegerPromotion2()
+{
+    char a = 30, b = 40, c = 10;
+    char d = (a * b) / c;
+    printf ("%d ", d);
+    return 0;
+}
+
+
+
+
+
+#include<stdio.h>
+int FloatPromotion()
+{
+    float x = 0.1;
+    if (x == 0.1)
+        printf("IF");
+    else if (x == 0.1f)
+        printf("ELSE IF");
+    else
+        printf("ELSE");
+}
+
+
+
+// C++ program to check the size of 'long'
+// data type
+
+int LongDefectes()
+{
+    printf(" Size of int = ",sizeof(int));
+    printf(" Size of long = " ,sizeof(long) );
+    printf("Size of long long = " , sizeof(long long));
+}
+
+
+// Declaration of various standard library functions.
+
+// Here argument of 'n' refers to maximum blocks that can be
+// allocated which is guaranteed to be non-negative.
+void *malloc(size_t n);
+
+// While copying 'n' bytes from 's2' to 's1'
+// n must be non-negative integer.
+void *memcpy(void *s1, void const *s2, size_t n);
+
+// strlen() uses size_t because the length of any string
+// will always be at least 0.
+size_t strlen(char const *s);
