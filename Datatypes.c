@@ -130,3 +130,40 @@ void *memcpy(void *s1, void const *s2, size_t n);
 // strlen() uses size_t because the length of any string
 // will always be at least 0.
 size_t strlen(char const *s);
+
+
+// An example of implicit conversion
+#include<stdio.h>
+int ImplicitCasting()
+{
+    int x = 10;    // integer x
+    char y = 'a';  // character c
+
+    // y implicitly converted to int. ASCII
+    // value of 'a' is 97
+    x = x + y;
+
+    // x is implicitly converted to float
+    float z = x + 1.0;
+
+    printf("x = %d, z = %f", x, z);
+    return 0;
+}
+
+
+
+
+// C program to demonstrate explicit type casting
+#include<stdio.h>
+
+int ExplicitCasting()
+{
+    double x = 1.2;
+
+    // Explicit conversion from double to int
+    int sum = (int)x + 1;
+
+    printf("sum = %d", sum);
+
+    return 0;
+}

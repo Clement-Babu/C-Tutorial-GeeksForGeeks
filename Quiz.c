@@ -1,20 +1,49 @@
 /*
- * Quiz.c
+ * Temp.c
  *
- *  Created on: 11-Jul-2020
+ *  Created on: 16-Jul-2020
  *      Author: Clement
  */
 
-#include <stdio.h>
-int main(void)
-{
-int x = 0;
-            if (5 < 4 || (7 / x) == 0)
-            {
-                printf("|| executed because 5>4 evaluates to         true.No divide by zero error.");
-            }
-            else
-            {
-                printf("Won't execute!");
-            }
+
+//
+//#include <stdio.h>
+//static int num = 16;
+//
+//int fun()
+//{
+//  return num--;
+//}
+//
+//int main()
+//{
+//  for(fun(); fun(); fun())
+//    printf("%d ", fun());
+//  return 0;
+//}
+
+
+
+
+//#include <stdio.h>
+//char *fun()
+//{
+//    static char arr[1024];
+//    return arr;
+//}
+//
+//int main()
+//{
+//    char *str = "geeksforgeeks";
+//    strcpy(fun(), str);
+//    str = fun();
+//    strcpy(str, "geeksquiz");
+//    printf("%s", fun());
+//    return 0;
+//}
+
+#include<stdio.h>
+int main(void){
+	int a=1.5,b=1.9;
+	printf("%d,%d",a,b);
 }
