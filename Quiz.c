@@ -43,3 +43,38 @@
 //}
 
 
+
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+// // printf(" "GEEKS %% FOR %% GEEKS"");
+//  getchar();
+//  return 0;
+//}
+
+
+
+
+//#include <stdio.h>
+//// Assume base address of "GeeksQuiz" to be 1000
+//int main()
+//{
+//   printf(5 + "GeeksQuiz");
+//   return 0;
+//}
+
+
+
+
+#include<stdio.h>
+
+int main()
+{
+    char *s = "Geeks Quiz";
+    int n = 7;
+    printf("%*s",n,s);
+    return 0;
+}

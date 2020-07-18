@@ -75,3 +75,18 @@ int GetAndPutChar(void){
 	}
 	return 0;
 }
+
+
+
+
+
+
+#include<stdio.h>
+
+int PrintSlicer()
+{
+    char *s = "Geeks Quiz";
+    int n = 7;
+    printf("%.*s",n,s);
+    return 0;
+}
