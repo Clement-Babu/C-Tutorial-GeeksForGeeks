@@ -42,8 +42,4 @@
 //    return 0;
 //}
 
-#include<stdio.h>
-int main(void){
-	int a=1.5,b=1.9;
-	printf("%d,%d",a,b);
-}
+
