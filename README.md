@@ -1,2 +1,2 @@
-# C-Tutorial-GeeksForGeeks-
+# C-Tutorial-GeeksForGeeks
 Practice Tutorial 
