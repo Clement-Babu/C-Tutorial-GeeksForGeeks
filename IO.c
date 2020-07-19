@@ -299,3 +299,204 @@ int DandIAreNotSimilarInScan()
 
     return 0;
 }
+
+// C program to illustrate situation
+// where flush(stdin) is required only
+// in certain compilers.
+#include <stdio.h>
+int BufferNotCleaned()
+{
+    char str[20];
+    int i;
+    for (i=0; i<2; i++)
+    {
+        scanf("%[^\n]s", str);
+        printf("%s\n", str);
+        // fflush(stdin);
+    }
+    return 0;
+}
+
+
+
+// C program to illustrate flush(stdin)
+// This program works as expected only
+// in certain compilers like Microsoft
+// visual studio.
+#include <stdio.h>
+#include<stdlib.h>
+int BufferClean()
+{
+    char str[20];
+    int i;
+    for (i = 0; i<2; i++)
+    {
+        scanf("%[^\n]s", str);
+        printf("%s\n", str);
+
+        // used to clear the buffer
+        // and accept the next string
+        fflush(stdin);
+    }
+    return 0;
+}
+
+
+
+
+
+// C Code to explain why not
+// clearing the input buffer
+// causes undesired outputs
+#include<stdio.h>
+int StringBufferRepeate()
+{
+    char str[80], ch;
+
+    // Scan input from user -
+    // GeeksforGeeks for example
+    scanf("%s", str);
+
+    // Scan character from user-
+    // 'a' for example
+    ch = getchar();
+
+    // Printing character array,
+    // prints “GeeksforGeeks”)
+    printf("%s\n", str);
+
+    // This does not print
+    // character 'a'
+    printf("%c", ch);
+
+    return 0;
+}
+
+
+
+
+// C Code to explain why adding
+// "while ( (getchar()) != '\n');"
+// after "scanf()" statement
+// flushes the input buffer
+#include<stdio.h>
+
+int StringBufferSolution()
+{
+    char str[80], ch;
+
+    // scan input from user -
+    // GeeksforGeeks for example
+    scanf("%s", str);
+
+    // flushes the standard input
+    // (clears the input buffer)
+    while ((getchar()) != '\n');
+
+    // scan character from user -
+    // 'a' for example
+    ch = getchar();
+
+    // Printing character array,
+    // prints “GeeksforGeeks”)
+    printf("%s\n", str);
+
+    // Printing character a: It
+    // will print 'a' this time
+    printf("%c", ch);
+
+    return 0;
+}
+
+
+
+
+/*c program demonstrating fscanf and its usage*/
+#include<stdio.h>
+int AdvanceScanfFilter()
+{
+    FILE* ptr = fopen("abc.txt","r");
+    if (ptr==NULL)
+    {
+        printf("no such file.");
+        return 0;
+    }
+
+    /* Assuming that abc.txt has content in below
+       format
+       NAME    AGE   CITY
+       abc     12    hyderbad
+       bef     25    delhi
+       cce     65    bangalore */
+    char buf[100];
+    while (fscanf(ptr,"%*s %*s %s ",buf)==1)
+        printf("%s\n", buf);
+
+    return 0;
+}
+
+
+
+
+
+
+// A simple C program to demonstrate
+// working of putchar_unlocked()
+#include <stdio.h>
+int FastersGetCh()
+{
+    // Syntax is same as getchar()
+    //char c = getchar_unlocked();
+
+    //putchar_unlocked(c);
+
+    return 0;
+}
+
+
+
+
+
+// C program to illustrate isprint() and iscntrl() functions.
+#include <stdio.h>
+#include <ctype.h>
+int CType(void)
+{
+    char ch = 'a';
+    if (isprint(ch)) {
+        printf("%c is printable character\n", ch);
+    } else {
+        printf("%c is not printable character\n", ch);
+    }
+
+    if (iscntrl(ch)) {
+        printf("%c is control character\n", ch);
+    } else {
+        printf("%c is not control character", ch);
+    }
+    return (0);
+}
+
+
+
+
+
+// C program to generate random numbers
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+
+// Driver program
+int main(void)
+{
+    // This program will create different sequence of
+    // random numbers on every program run
+
+    // Use current time as seed for random generator
+    srand(time(0));
+
+    for(int i = 0; i<4; i++)
+        printf(" %d ", rand());
+
+    return 0;
+}
